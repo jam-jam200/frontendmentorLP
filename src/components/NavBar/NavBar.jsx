@@ -3,6 +3,8 @@ import "./Navbar.css";
 import { Logo, ArrowDown, ArrowUp, Close, Menubar } from "../../assets";
 
 const Menu = () => {
+  const [toggleUp, setToggleUp] = useState(false);
+  const [toggleDown, setToggleDown] = useState(false);
   return (
     <>
       <p>
@@ -48,7 +50,7 @@ const NavBar = () => {
           <img
             src={Menubar}
             alt="menubar"
-            onClick={() => setToggleMenu(false)}
+            onClick={() => setToggleMenu(true)}
           />
         )}
         {toggleMenu && (
